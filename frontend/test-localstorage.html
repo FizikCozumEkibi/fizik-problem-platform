@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LocalStorage Test</title>
+</head>
+<body>
+    <h1>LocalStorage API Key Test</h1>
+    
+    <div>
+        <h2>API Key Kaydet</h2>
+        <input type="text" id="apikey" placeholder="API Key" style="width: 400px; padding: 10px;">
+        <button onclick="saveKey()">KAYDET</button>
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <h2>API Key Oku</h2>
+        <button onclick="readKey()">OKU</button>
+        <div id="result" style="margin-top: 10px; padding: 10px; background: #f0f0f0;"></div>
+    </div>
+    
+    <script>
+        function saveKey() {
+            const key = document.getElementById('apikey').value;
+            localStorage.setItem('gemini_api_key', key);
+            alert('Kaydedildi: ' + key);
+            readKey();
+        }
+        
+        function readKey() {
+            const key = localStorage.getItem('gemini_api_key');
+            const result = document.getElementById('result');
+            
+            if (key) {
+                result.innerHTML = `
+                    <strong>✅ API Key Bulundu!</strong><br>
+                    Key: ${key}<br>
+                    Uzunluk: ${key.length}
+                `;
+                result.style.background = '#d4edda';
+            } else {
+                result.innerHTML = '<strong>❌ API Key Bulunamadı!</strong>';
+                result.style.background = '#f8d7da';
+            }
+        }
+        
+        // Sayfa yüklenince oku
+        window.onload = readKey;
+    </script>
+</body>
+</html>
