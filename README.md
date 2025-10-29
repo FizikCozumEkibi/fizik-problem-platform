@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🔬 Fizik Problem Çözücü Web Platformu
 
 TYT-AYT fizik problemlerini yapay zeka destekli olarak çözen, sesli anlatım ve video eğitim içerikleriyle zenginleştirilmiş kapsamlı bir eğitim platformu.
@@ -112,3 +113,6 @@ Katkılarınızı bekliyoruz! Pull request göndermekten çekinmeyin.
 ---
 
 **Geliştirici Notu**: Platform, API Key olmadan da çalışabilir. Otomatik fallback mekanizması sayesinde en uygun çözüm yöntemini seçer.
+=======
+# fizik-problem-platform
+>>>>>>> c0c7e3619fe4eb5e5bf7ff16ab504a8941f5672c
